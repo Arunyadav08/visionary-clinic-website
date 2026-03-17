@@ -1,85 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <p style="text-align:center;color:#666;font-size:14px;">
-Helping established clinics grow with clarity, better patients, and less owner dependency
-</p>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Visionary Clinic</title>
 
-<style> 
-  .section h2{
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.section p{
-  color:#555;
-  line-height:1.6;
-}
-
-.btn{
-  transition: all 0.3s ease;
-}
-
-.btn:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-  @media(max-width:768px){
-  h1{font-size:28px;}
-  .section{padding:40px 0;}
-}
-body {
-  font-family: 'DM Sans', sans-serif;
+<style>
+body{
+  font-family:'DM Sans',sans-serif;
   margin:0;
+  scroll-behavior:smooth;
 }
 
-header {
+header{
   display:flex;
   justify-content:space-between;
-  padding:20px;
+  padding:15px 30px;
   background:#fff;
+  position:sticky;
+  top:0;
 }
 
-nav a {
+nav a{
   margin:0 10px;
   text-decoration:none;
   color:#333;
 }
 
-.section {
-  padding:60px 20px;
+.section{
+  padding:70px 20px;
   text-align:center;
 }
 
-.hero {
+.hero{
   background:#E8F1F8;
-  padding:80px 20px;
+  padding:100px 20px;
 }
 
-.cards {
+.cards{
   display:flex;
-  gap:20px;
   flex-wrap:wrap;
+  gap:20px;
   justify-content:center;
 }
 
-.card {
+.card{
   background:#fff;
   padding:20px;
   border-radius:10px;
   width:250px;
 }
 
-.btn {
+.btn{
   background:#0054AA;
   color:#fff;
   padding:10px 20px;
   border:none;
   margin:10px;
   cursor:pointer;
+}
+
+footer{
+  background:#f1f1f1;
+  text-align:center;
+  padding:20px;
 }
 </style>
 </head>
@@ -90,62 +74,61 @@ nav a {
 <header>
   <h2>The Visionary Clinic</h2>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Testimonials</a>
-    <a href="#">Blog</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <button class="btn">Book a Growth Review</button>
+  <a href="#contact"><button class="btn">Book a Growth Review</button></a>
 </header>
 
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <p>FOR ESTABLISHED WELLNESS PRACTICES</p>
+  <h1>Your Practice Isn’t Broken. But It’s Leaking Growth.</h1>
+  <p>We help clinics attract better patients and grow without pressure.</p>
 
-<!-- ================= HERO SECTION ================= -->
-<section class="hero">
-  <p>FOR ESTABLISHED WELLNESS AND INTEGRATIVE CLINICS</p>
-  <h1>Get more of the right patients without having your whole clinic depend on you.</h1>
-  <p>You’ve built a respected clinic, but growth still feels heavy...</p>
-
-  <button class="btn">Book a Growth Review</button>
-  <button class="btn">See How It Works</button>
+  <a href="#contact"><button class="btn">Get Your Growth Diagnosis</button></a>
+  <a href="#services"><button class="btn">See How It Works</button></a>
 </section>
 
-
-<!-- ================= STATS SECTION ================= -->
-<section class="section container">
+<!-- ================= STATS ================= -->
+<section class="section">
   <div class="cards">
-    <div class="card"><h2>+120%</h2><p>Patient Growth</p></div>
-    <div class="card"><h2>3X</h2><p>Conversion Rate</p></div>
-    <div class="card"><h2>90%</h2><p>Retention</p></div>
+    <div class="card"><h2>8+</h2><p>Years Experience</p></div>
+    <div class="card"><h2>20+</h2><p>Clinics Supported</p></div>
+    <div class="card"><h2>50+</h2><p>Audits Completed</p></div>
+    <div class="card"><h2>15+</h2><p>Growth Projects</p></div>
   </div>
 </section>
 
-
-<!-- ================= PROBLEM SECTION ================= -->
+<!-- ================= PROBLEM ================= -->
 <section class="section">
-  <h2>Why Growing Your Practice Feels Hard</h2>
+  <h2>Why Growth Feels Hard</h2>
   <div class="cards">
     <div class="card">Too much depends on you</div>
-    <div class="card">Wrong inquiries</div>
+    <div class="card">Wrong patients</div>
     <div class="card">Referral dependency</div>
+    <div class="card">Generic website</div>
   </div>
 </section>
 
+<!-- ================= FOUNDER ================= -->
+<section class="section" id="about">
+  <h2>Hi, I’m Nathan.</h2>
+  <p>I help clinic owners fix what’s blocking growth.</p>
 
-<!-- ================= FOUNDER SECTION ================= -->
-<section class="section">
-  <h2>Hi, I’m Nathan</h2>
-  <p>I help clinic owners grow without pressure...</p>
-
-  <img src="abc.jpg"
+  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
        style="width:150px;border-radius:50%;">
+
+  <p><strong>Growth Strategy Consultant</strong></p>
 </section>
 
-
-<!-- ================= APPROACH SECTION ================= -->
-<section class="section">
-  <h2>How We Think About Growth</h2>
+<!-- ================= APPROACH ================= -->
+<section class="section" id="services">
+  <h2>How We Help</h2>
   <div class="cards">
     <div class="card">Attract Better Patients</div>
     <div class="card">Build Trust</div>
@@ -153,87 +136,75 @@ nav a {
   </div>
 </section>
 
-
-<!-- ================= PROCESS SECTION ================= -->
+<!-- ================= PROCESS ================= -->
 <section class="section">
   <h2>How It Works</h2>
   <div class="cards">
     <div class="card">Audit</div>
-    <div class="card">Find Gaps</div>
+    <div class="card">Find Problems</div>
     <div class="card">Strategy</div>
     <div class="card">Execution</div>
   </div>
 
-  <button class="btn">Book a Growth Review</button>
+  <a href="#contact"><button class="btn">Book a Growth Review</button></a>
 </section>
-
 
 <!-- ================= TESTIMONIALS ================= -->
-<section class="section">
+<section class="section" id="testimonials">
   <h2>Client Wins</h2>
+
   <div class="cards">
-
     <div class="card">
-      “Before working with Nathan, we were getting random inquiries. Now we attract the right patients consistently.”  
-      <br><strong>— Dr. Smith, chiropractor</strong>
+      “We now attract better patients consistently.”  
+      <br><strong>— Chiropractor</strong>
     </div>
 
     <div class="card">
-      “Our online presence finally matches our quality of care.”  
-      <br><strong>— Sarah Lee</strong>
+      “Our website finally looks premium.”  
+      <br><strong>— Physiotherapist</strong>
     </div>
 
     <div class="card">
-      “We got clarity on what actually matters.”  
-      <br><strong>— Mark Johnson</strong>
+      “Clear strategy, better results.”  
+      <br><strong>— Clinic Owner</strong>
     </div>
-
   </div>
 </section>
-
-
-<!-- ================= FAQ ================= -->
-<section class="section">
-  <h2>FAQs</h2>
-  <div class="card">Do I need more patients?</div>
-  <div class="card">What if referrals are working?</div>
-  <div class="card">How involved do I need to be?</div>
-</section>
-
 
 <!-- ================= BLOG ================= -->
-<section class="section">
+<section class="section" id="blog">
   <h2>Insights</h2>
   <div class="cards">
-    <div class="card">Why full schedule feels tight</div>
+    <div class="card">Why schedule feels tight</div>
     <div class="card">Website before first call</div>
-    <div class="card">Hiring associate risks</div>
+    <div class="card">Hiring risks</div>
   </div>
 </section>
 
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <h2>Contact</h2>
 
-<!-- ================= FINAL CTA (UPGRADED) ================= -->
-<section class="section" style="background:#0054AA;color:white;">
-  
-  <p style="color:white;opacity:0.9;">READY FOR GROWTH THAT FEELS LIGHTER</p>
-  
-  <h2>Build a clinic that brings in the right patients without everything running through you.</h2>
-  
-  <p style="max-width:600px;margin:auto;color:white">
-    You do not need more random marketing. You need the right plan, priorities, and support so growth feels easier and more predictable.
-  </p>
+  <p>📞 8053309511</p>
+  <p>📧 Arun.webcraft@gmail.com</p>
 
-  <a href="https://wa.me/8053309511">
-    <button class="btn" style="background:white;color:#0054AA;margin-top:20px;">
-      Book a Growth Review
-    </button>
+  <a href="https://wa.me/918053309511">
+    <button class="btn">Chat on WhatsApp</button>
   </a>
-
 </section>
 
+<!-- ================= FINAL CTA ================= -->
+<section class="section" style="background:#0054AA;color:white;">
+  <h2>Ready to Grow Your Clinic?</h2>
+  <a href="https://wa.me/918053309511">
+    <button class="btn" style="background:white;color:#0054AA;">
+      Book Now
+    </button>
+  </a>
+</section>
 
 <!-- ================= FOOTER ================= -->
-<footer style="text-align:center;padding:20px;background:#f1f1f1;">
+<footer>
   <p>© 2026 The Visionary Clinic</p>
 </footer>
 
