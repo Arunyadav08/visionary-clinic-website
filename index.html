@@ -4,118 +4,217 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Visionary Clinic</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;600&family=Sora:wght@500;700&display=swap" rel="stylesheet">
-<style>
-:root{--primary:#0054AA;--light:#E8F1F8}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'DM Sans',sans-serif;background:var(--light);color:#111}
-.container{width:90%;max-width:1100px;margin:auto}
-h1,h2,h3{font-family:'Sora',sans-serif}
-header{display:flex;justify-content:space-between;padding:20px 0}
-a{text-decoration:none;color:#000;margin:0 10px}
-.hero{padding:120px 0;text-align:center;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1552664730-d307ca884978');color:#fff}
-.btn{padding:12px 24px;border:none;border-radius:6px;background:var(--primary);color:#fff;cursor:pointer}
-.section{padding:70px 0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:#fff;padding:20px;border-radius:12px}
-.small{color:#666;font-size:14px;margin-bottom:10px}
-footer{background:var(--primary);color:#fff;text-align:center;padding:20px}
+
+<style> 
+  .section h2{
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.section p{
+  color:#555;
+  line-height:1.6;
+}
+
+.btn{
+  transition: all 0.3s ease;
+}
+
+.btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  margin:0;
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#fff;
+}
+
+nav a {
+  margin:0 10px;
+  text-decoration:none;
+  color:#333;
+}
+
+.section {
+  padding:60px 20px;
+  text-align:center;
+}
+
+.hero {
+  background:#E8F1F8;
+  padding:80px 20px;
+}
+
+.cards {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card {
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  width:250px;
+}
+
+.btn {
+  background:#0054AA;
+  color:#fff;
+  padding:10px 20px;
+  border:none;
+  margin:10px;
+  cursor:pointer;
+}
 </style>
 </head>
+
 <body>
 
-<header class="container">
-<h2>The Visionary Clinic</h2>
-<nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
-</nav>
-<button class="btn">Book a Growth Review</button>
+<!-- ================= HEADER ================= -->
+<header>
+  <h2>The Visionary Clinic</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Testimonials</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact</a>
+  </nav>
+  <button class="btn">Book a Growth Review</button>
 </header>
 
+
+<!-- ================= HERO SECTION ================= -->
 <section class="hero">
-<div class="container">
-<p class="small">FOR ESTABLISHED WELLNESS AND INTEGRATIVE CLINICS</p>
-<h1>Get more of the right patients without having your whole clinic depend on you.</h1>
-<p>You’ve built a respected clinic... but growth still feels heavier than it should.</p>
-<button class="btn">Book a Growth Review</button>
-</div>
+  <p>FOR ESTABLISHED WELLNESS AND INTEGRATIVE CLINICS</p>
+  <h1>Get more of the right patients without having your whole clinic depend on you.</h1>
+  <p>You’ve built a respected clinic, but growth still feels heavy...</p>
+
+  <button class="btn">Book a Growth Review</button>
+  <button class="btn">See How It Works</button>
 </section>
 
-<section class="section container">
-<p class="small">FOR CLINICS THAT ARE BUSY, FULL, AND STILL KNOW SOMETHING IS OFF</p>
-<h2>The problem is not always more patients.</h2>
-<p>Most clinic owners do not need more random marketing.</p>
-<div class="cards">
-<div class="card">8+ Years Experience</div>
-<div class="card">20+ Businesses Supported</div>
-<div class="card">50+ Assets Reviewed</div>
-</div>
+
+<!-- ================= STATS SECTION ================= -->
+<section class="section">
+  <div class="cards">
+    <div class="card"><h2>+120%</h2><p>Patient Growth</p></div>
+    <div class="card"><h2>3X</h2><p>Conversion Rate</p></div>
+    <div class="card"><h2>90%</h2><p>Retention</p></div>
+  </div>
 </section>
 
-<section class="section container">
-<p class="small">IF ANY OF THIS SOUNDS FAMILIAR</p>
-<h2>Why Growing Your Practice feels harder</h2>
-<div class="cards">
-<div class="card">Too much depends on you</div>
-<div class="card">Wrong inquiries</div>
-<div class="card">Referrals overloaded</div>
-<div class="card">Generic online presence</div>
-</div>
+
+<!-- ================= PROBLEM SECTION ================= -->
+<section class="section">
+  <h2>Why Growing Your Practice Feels Hard</h2>
+  <div class="cards">
+    <div class="card">Too much depends on you</div>
+    <div class="card">Wrong inquiries</div>
+    <div class="card">Referral dependency</div>
+  </div>
 </section>
 
-<section class="section container">
-<p class="small">MEET THE FOUNDER</p>
-<h2>Hi, I’m Nathan</h2>
-<p>I help clinic owners fix growth bottlenecks and build sustainable systems.</p>
+
+<!-- ================= FOUNDER SECTION ================= -->
+<section class="section">
+  <h2>Hi, I’m Nathan</h2>
+  <p>I help clinic owners grow without pressure...</p>
+
+  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
+       style="width:150px;border-radius:50%;">
 </section>
 
-<section class="section container">
-<p class="small">HOW WE THINK</p>
-<h2>This is not about more leads</h2>
-<div class="cards">
-<div class="card">Attract better-fit patients</div>
-<div class="card">Build trust early</div>
-<div class="card">Reduce owner pressure</div>
-</div>
+
+<!-- ================= APPROACH SECTION ================= -->
+<section class="section">
+  <h2>How We Think About Growth</h2>
+  <div class="cards">
+    <div class="card">Attract Better Patients</div>
+    <div class="card">Build Trust</div>
+    <div class="card">Reduce Dependency</div>
+  </div>
 </section>
 
-<section class="section container">
-<p class="small">HOW IT WORKS</p>
-<h2>We start by finding what’s wrong</h2>
-<div class="cards">
-<div class="card">Review current system</div>
-<div class="card">Find weak points</div>
-<div class="card">Create clear plan</div>
-<div class="card">Implement fixes</div>
-</div>
-<button class="btn">Book a Growth Review</button>
+
+<!-- ================= PROCESS SECTION ================= -->
+<section class="section">
+  <h2>How It Works</h2>
+  <div class="cards">
+    <div class="card">Audit</div>
+    <div class="card">Find Gaps</div>
+    <div class="card">Strategy</div>
+    <div class="card">Execution</div>
+  </div>
+
+  <button class="btn">Book a Growth Review</button>
 </section>
 
-<section class="section container">
-<p class="small">CLIENT WINS</p>
-<h2>What changes when it clicks</h2>
-<div class="card">“Clear strategy. Better patients.”</div>
-<div class="card">“Growth became easier.”</div>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section">
+  <h2>Client Wins</h2>
+  <div class="cards">
+
+    <div class="card">
+      “Before working with Nathan, we were getting random inquiries. Now we attract the right patients.”  
+      <br><strong>— Dr. Smith</strong>
+    </div>
+
+    <div class="card">
+      “Our online presence finally matches our quality of care.”  
+      <br><strong>— Sarah Lee</strong>
+    </div>
+
+    <div class="card">
+      “We got clarity on what actually matters.”  
+      <br><strong>— Mark Johnson</strong>
+    </div>
+
+  </div>
 </section>
 
-<section class="section container">
-<p class="small">FAQ</p>
-<h2>Common Questions</h2>
-<div class="card">Do I need more patients? → Not always.</div>
-<div class="card">What if referrals are enough? → Not scalable.</div>
+
+<!-- ================= FAQ ================= -->
+<section class="section">
+  <h2>FAQs</h2>
+  <div class="card">Do I need more patients?</div>
+  <div class="card">What if referrals are working?</div>
+  <div class="card">How involved do I need to be?</div>
 </section>
 
-<section class="section container">
-<p class="small">FINAL STEP</p>
-<h2>Build a clinic that grows without pressure</h2>
-<button class="btn">Book a Growth Review</button>
+
+<!-- ================= BLOG ================= -->
+<section class="section">
+  <h2>Insights</h2>
+  <div class="cards">
+    <div class="card">Why full schedule feels tight</div>
+    <div class="card">Website before first call</div>
+    <div class="card">Hiring associate risks</div>
+  </div>
 </section>
 
-<footer>
-<p>© 2026 The Visionary Clinic</p>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section">
+  <h2>Build a clinic that grows without pressure</h2>
+  <button class="btn">Book a Growth Review</button>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer style="text-align:center;padding:20px;background:#f1f1f1;">
+  <p>© 2026 The Visionary Clinic</p>
 </footer>
 
 </body>
