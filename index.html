@@ -3,203 +3,249 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Visionary Clinic</title>
+
+<!-- SEO -->
+<title>The Visionary Clinic | Growth Strategy</title>
+<meta name="description" content="Helping wellness clinics grow with better patients and strategy">
+<meta name="robots" content="index, follow">
 
 <style>
-body{font-family:'DM Sans',sans-serif;margin:0;scroll-behavior:smooth;}
-header{display:flex;justify-content:space-between;padding:15px 30px;background:#fff;position:sticky;top:0;}
-nav a{margin:0 10px;text-decoration:none;color:#333;}
+body{margin:0;font-family:'DM Sans',sans-serif;}
+
+/* HEADER */
+header{
+display:flex;justify-content:space-between;
+padding:15px 30px;background:#fff;
+position:sticky;top:0;z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* ===== SLIDER ===== */
+.slider{position:relative;overflow:hidden;}
+.slides{display:flex;transition:0.5s;}
+.slide{min-width:100%;position:relative;}
+.slide img{width:100%;height:100vh;object-fit:cover;}
+
+.overlay{
+position:absolute;top:50%;left:50%;
+transform:translate(-50%,-50%);
+color:white;text-align:center;
+background:rgba(0,0,0,0.5);
+padding:30px;border-radius:10px;
+}
+
+.prev,.next{
+position:absolute;top:50%;
+transform:translateY(-50%);
+font-size:30px;color:white;
+cursor:pointer;padding:10px;
+background:rgba(0,0,0,0.4);
+}
+.prev{left:10px;} .next{right:10px;}
+
+/* SECTION */
 .section{padding:80px 20px;text-align:center;}
-.hero{background:#E8F1F8;padding:120px 20px;}
 .cards{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
-.card{background:#fff;padding:25px;border-radius:12px;width:260px;box-shadow:0 5px 15px rgba(0,0,0,0.05);}
-.btn{background:#0054AA;color:#fff;padding:12px 25px;border:none;margin:10px;cursor:pointer;}
-footer{background:#f1f1f1;text-align:center;padding:20px;}
+
+.card{
+background:#fff;padding:25px;border-radius:12px;
+width:280px;box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+.card:hover{transform:translateY(-5px);}
+.card img{width:100%;border-radius:10px;}
+
+/* BUTTON */
+.btn{
+background:#0054AA;color:white;
+padding:12px 25px;border:none;
+cursor:pointer;margin-top:10px;
+}
+
+/* FLOAT BUTTON */
+.whatsapp-float{
+position:fixed;bottom:20px;right:20px;
+width:60px;height:60px;
+background:#25D366;color:white;
+display:flex;align-items:center;
+justify-content:center;
+border-radius:50%;font-size:28px;
+z-index:1000;
+}
+
+/* POPUP */
+.popup-overlay{
+position:fixed;top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(6px);
+display:none;justify-content:center;
+align-items:center;z-index:2000;
+}
+
+.popup-content{
+background:white;padding:30px;
+border-radius:15px;text-align:center;
+animation:fade 0.4s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.close-btn{
+position:absolute;right:20px;top:15px;
+cursor:pointer;
+}
+
+footer{
+background:#f1f1f1;
+text-align:center;
+padding:20px;
+}
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header>
-  <h2>The Visionary Clinic</h2>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a href="#contact"><button class="btn">Book a Growth Review</button></a>
+<h2>The Visionary Clinic</h2>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="home">
-  <p>FOR ESTABLISHED WELLNESS PRACTICES</p>
-  <h1>Your Practice Isn’t Broken. But It’s Leaking Growth.</h1>
-  <p>
-    You’ve built a trusted clinic and deliver real results, but growth still feels heavier than it should. 
-    We help you identify what’s slowing you down and fix what actually drives better patients, stronger positioning, 
-    and consistent growth.
-  </p>
+<!-- HERO SLIDER -->
+<section class="slider">
 
-  <a href="#contact"><button class="btn">Get Your Growth Diagnosis</button></a>
-  <a href="#services"><button class="btn">See How It Works</button></a>
+<div class="slides">
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+<div class="overlay">
+<h1>Your Practice Isn’t Broken</h1>
+<p>But It’s Leaking Growth</p>
+<button class="btn" onclick="openPopup()">Get Free Audit</button>
+</div>
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+<div class="overlay">
+<h1>Attract Better Patients</h1>
+<p>Grow with clarity</p>
+</div>
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+<div class="overlay">
+<h1>Scale Without Stress</h1>
+<p>Smart systems</p>
+</div>
+</div>
+
+</div>
+
+<span class="prev" onclick="changeSlide(-1)">❮</span>
+<span class="next" onclick="changeSlide(1)">❯</span>
+
 </section>
 
-<!-- ================= STATS ================= -->
+<!-- SERVICES -->
 <section class="section">
-  <h2>Proven Experience & Results</h2>
-  <p>We’ve helped multiple wellness practices improve clarity, patient quality, and revenue.</p>
+<h2>Our Services</h2>
+<div class="cards">
 
-  <div class="cards">
-    <div class="card"><h2>8+</h2><p>Years Experience working with clinics</p></div>
-    <div class="card"><h2>20+</h2><p>Businesses supported across niches</p></div>
-    <div class="card"><h2>50+</h2><p>Digital audits & performance reviews</p></div>
-    <div class="card"><h2>15+</h2><p>Successful growth projects delivered</p></div>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+<h3>Growth Strategy</h3>
+<p>Clear roadmap for clinic growth.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+<h3>Website Optimization</h3>
+<p>Convert visitors into patients.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+<h3>Patient Acquisition</h3>
+<p>High quality leads.</p>
+</div>
+
+</div>
 </section>
 
-<!-- ================= PROBLEM ================= -->
+<!-- TESTIMONIAL -->
 <section class="section">
-  <h2>Why Growing Your Practice Still Feels Hard</h2>
-  <p>
-    Many clinic owners assume they need more marketing. In reality, growth often feels difficult because the wrong 
-    systems, messaging, or positioning are holding them back.
-  </p>
+<h2>Client Results</h2>
+<div class="cards">
 
-  <div class="cards">
-    <div class="card">Too much still depends on you as the owner</div>
-    <div class="card">You’re getting inquiries, but not the right patients</div>
-    <div class="card">Referrals are doing most of the heavy lifting</div>
-    <div class="card">Your website looks too similar to competitors</div>
-    <div class="card">Pricing feels hard to justify online</div>
-    <div class="card">You want better patients, not just more volume</div>
-  </div>
+<div class="card">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<p>“Amazing growth!”</p>
+</div>
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<p>“Premium patients now.”</p>
+</div>
+
+</div>
 </section>
 
-<!-- ================= FOUNDER ================= -->
-<section class="section" id="about">
-  <h2>Hi, I’m Nathan.</h2>
-  <p>
-    I work with clinic owners to uncover what’s slowing down growth and help them fix the right things first. 
-    The goal isn’t to add more work to your plate — it’s to simplify your systems, attract better-fit patients, 
-    and build a business that doesn’t depend entirely on you.
-  </p>
-
-  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
-       style="width:150px;border-radius:50%;margin-top:20px;">
-
-  <p><strong>Growth Strategy Consultant</strong></p>
-</section>
-
-<!-- ================= APPROACH ================= -->
-<section class="section" id="services">
-  <h2>How We Help Clinics Grow</h2>
-  <p>
-    We focus on the parts of your business that directly impact trust, conversion, and patient quality — 
-    not vanity marketing metrics.
-  </p>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Attract Better-Fit Patients</h3>
-      <p>Bring in people who already value your work and are ready to commit.</p>
-    </div>
-
-    <div class="card">
-      <h3>Build Trust Before First Call</h3>
-      <p>Your website and messaging should answer questions before patients even reach out.</p>
-    </div>
-
-    <div class="card">
-      <h3>Reduce Owner Dependency</h3>
-      <p>Create systems that allow your clinic to grow without everything relying on you.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROCESS ================= -->
+<!-- CONTACT -->
 <section class="section">
-  <h2>Our Simple Process</h2>
-  <p>
-    We keep things clear and practical — no complicated systems, no unnecessary steps.
-  </p>
+<h2>Contact</h2>
+<p>📞 8053309511</p>
+<p>📧 Arun.webcraft@gmail.com</p>
 
-  <div class="cards">
-    <div class="card"><h3>Step 1</h3><p>Review your current website and presence</p></div>
-    <div class="card"><h3>Step 2</h3><p>Identify what’s blocking growth</p></div>
-    <div class="card"><h3>Step 3</h3><p>Create a clear strategic roadmap</p></div>
-    <div class="card"><h3>Step 4</h3><p>Help implement the right changes</p></div>
-  </div>
-
-  <a href="#contact"><button class="btn">Book a Growth Review</button></a>
+<a href="https://wa.me/918053309511">
+<button class="btn">Chat Now</button>
+</a>
 </section>
 
-<!-- ================= TESTIMONIALS ================= -->
-<section class="section" id="testimonials">
-  <h2>Client Success Stories</h2>
-  <p>Here’s what changes when the right strategy is in place.</p>
+<!-- FLOAT BUTTON -->
+<a href="https://wa.me/918053309511" class="whatsapp-float">💬</a>
 
-  <div class="cards">
-    <div class="card">
-      “We started attracting better patients who actually value our services.”  
-      <br><strong>— Chiropractor</strong>
-    </div>
+<!-- POPUP -->
+<div id="popupBox" class="popup-overlay">
+<div class="popup-content">
+<span class="close-btn" onclick="closePopup()">✖</span>
+<h2>Free Growth Audit 🚀</h2>
+<p>Limited slots available</p>
 
-    <div class="card">
-      “Our online presence finally reflects our real quality.”  
-      <br><strong>— Physiotherapist</strong>
-    </div>
+<a href="https://wa.me/918053309511">
+<button class="btn">Chat on WhatsApp</button>
+</a>
+</div>
+</div>
 
-    <div class="card">
-      “We now have clarity and direction for growth.”  
-      <br><strong>— Clinic Owner</strong>
-    </div>
-  </div>
-</section>
+<!-- SCRIPT -->
+<script>
+let index=0;
 
-<!-- ================= BLOG ================= -->
-<section class="section" id="blog">
-  <h2>Insights & Resources</h2>
-  <p>Actionable ideas to help you grow your clinic smarter.</p>
+function changeSlide(step){
+const slides=document.querySelector('.slides');
+const total=document.querySelectorAll('.slide').length;
+index=(index+step+total)%total;
+slides.style.transform=`translateX(-${index*100}%)`;
+}
 
-  <div class="cards">
-    <div class="card"><h3>Why a Full Schedule Still Feels Tight</h3></div>
-    <div class="card"><h3>What Your Website Should Do Before Calls</h3></div>
-    <div class="card"><h3>How to Grow Without Burnout</h3></div>
-  </div>
-</section>
+setInterval(()=>{changeSlide(1)},4000);
 
-<!-- ================= CONTACT ================= -->
-<section class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p>Let’s discuss how we can improve your clinic’s growth.</p>
+function openPopup(){
+document.getElementById("popupBox").style.display="flex";
+}
+function closePopup(){
+document.getElementById("popupBox").style.display="none";
+}
+setTimeout(openPopup,5000);
+</script>
 
-  <p>📞 8053309511</p>
-  <p>📧 Arun.webcraft@gmail.com</p>
-
-  <a href="https://wa.me/918053309511">
-    <button class="btn">Chat on WhatsApp</button>
-  </a>
-</section>
-
-<!-- ================= FINAL CTA ================= -->
-<section class="section" style="background:#0054AA;color:white;">
-  <h2>Ready to Grow Your Clinic?</h2>
-  <p>Let’s fix what’s holding you back and create a clear growth plan.</p>
-
-  <a href="https://wa.me/918053309511">
-    <button class="btn" style="background:white;color:#0054AA;">
-      Book Now
-    </button>
-  </a>
-</section>
-
-<!-- ================= FOOTER ================= -->
 <footer>
-  <p>© 2026 The Visionary Clinic</p>
+<p>© 2026 The Visionary Clinic</p>
 </footer>
 
 </body>
